@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Page pour mon resto ; Nous conyacter</title>
+        <meta charset="UTF-8">
+        <meta name="description" content=" Page de restauration pour passer des commende en ligne ">
+        <style>
+           body{
+    font-family: serif;
+    background-color: rgb(150, 127, 255);
+    background: url(./img/SP.jpg) center/cover;
+    min-height: 100vh ;
+}
+/* *{
+    padding 0px;
+    margin 0px;
+} */
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 8px #000084;
+    color: rgba(249, 14, 14, 0.855);
+    text-decoration: underline;
+    font-family: fantasy, sans-serif;
+} 
+main {
+    min-height: 500px;
+    width: 90%;
+    background: rgba(255, 0, 0, 0.59);
+    margin: 0 auto;
+    border: 2px solid blue;
+    border-radius: 20px;
+    box-shadow: 6px 6px 20px 20px rgb(0, 0, 0);
+    padding: 15px;
+}
+h2{
+    margin: 0px;
+}
+.flexbox , 
+.grid,
+.absolute {
+    border: 2px dashed black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 150px;
+}
+.flexbox ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.flexbox li {
+    letter-spacing: none;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background: turquoise;
+    /* Centrer un unique élément horizontalement et verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "i1 i2"
+    "ta ta"
+    "vi bt";
+}
+input, textarea {
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 8px;
+
+}
+
+textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    .grid-container {
+        display: block;
+        margin: 20px auto;
+    }
+    .grid-container {
+        width: 3OOpx;
+    }
+}
+@media screen and (max-width: 400px) {
+    .flexbox ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    form {
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "i1"
+    "i2"
+    "ta"
+    "bt";
+    }
+    
+}
+
+        </style>
+    </head>
+    <body>
+        <h1> COMMENT NOUS CONTACTER </h1>
+        <form action="Contact.html">
+            <fieldset>
+                <Legend>Information</Legend>
+            <div>
+                <label for="nid">Votre nom</label>
+                <input type="text" name="nom" id="nid" autofocus required>
+            </div>
+
+            <div>
+                <label for="mid">Votre prénom</label>
+                <input type="password" name="prénom" id="mid" placeholder="Djamal">
+            </div>
+
+            <div>
+                <label for="lid">Mot de passe</label>
+                <input type="hidden" name="mot de passe" id="lid" placeholder="MP" inputmode="numeric">
+            </div>
+
+            <div>
+                <label for="fi">fichier</label>
+                <input type="file" name="fichier" id="fi" placeholder="MP" inputmode="numeric">
+            </div>
+
+            <div>
+                <label for="ri">Date</label>
+                <input type="date" name="Date" id="ri" inputmode="numeric">
+            </div>
+
+            <div>
+                <label for="pi">Recherche</label>
+                <input type="number" name="pour faire des recherche" id="pi">
+            </div>
+
+            <div>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre text"></textarea>
+            </div>
+
+            <input type="submit" value="Envoyer mon formulaire">
+            <input type="reset" value="annuler">
+            <button type="reset">Boutton</button>
+            </fieldset>
+
+            <fieldset>  
+                <form action="Contact.html">
+                    <legend> XX : XY </legend>
+                    <label><h3>Sexe</h3></label>
+                    <div>
+                        <input type="radio" name="Sexe" id="MX" checked>
+                        <label for="MX">Masculin</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="Sexe" id="FX">
+                        <label for="FX">Feminin</label>
+                    </div>
+                </form>
+            </fieldset>
+        </form>
+        
+            <a href="Menu.html">Menu</a>
+            <a href="web.html#BOOF"> retour web</a>
+            <a href="index.html"> Page resto </a>
+        </p>
+    </body>  
+</html>
+    
